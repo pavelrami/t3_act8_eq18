@@ -1,0 +1,40 @@
+.app-shell { min-height: 100vh; display: grid; grid-template-columns: 300px minmax(0, 1fr); background: var(--cream); }
+.sidebar { background: var(--coffee); color: #fff; padding: 34px 12px; }
+.sidebar-title { padding: 0 18px; font-size: 23px; font-weight: 700; margin-bottom: 40px; }
+.sidebar-menu { display: flex; flex-direction: column; gap: 14px; }
+.sidebar-link { display: flex; align-items: center; gap: 16px; width: 100%; border: 0; border-radius: 16px; background: transparent; text-align: left; color: #fff; padding: 22px 24px; font-size: 14px; }
+.sidebar-link.active { background: var(--wine); }
+.sidebar-link:hover:not(.active) { background: #553624; }
+.sidebar-icon { font-size: 22px; width: 28px; }
+.app-content { min-width: 0; }
+.navbar { min-height: 96px; background: #fff; padding: 18px 48px; display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+.navbar-title { font-size: 17px; }
+.navbar-profile { display: flex; align-items: center; gap: 12px; }
+.navbar-avatar { width: 40px; height: 40px; border-radius: 50%; object-fit: cover; background: #f4e0cc; }
+.navbar-name { font-size: 13px; font-weight: 600; }
+.logout-button { border: 1px solid #d7c4b1; border-radius: 8px; background: #fff; color: var(--coffee); padding: 10px; font-size: 13px; }
+.logout-button:hover { background: #fff5e7; }
+.dashboard-main { padding: 30px 48px; }
+.dashboard-main h1 { font-size: 26px; margin: 0; }
+.dashboard-subtitle { font-size: 13px; color: #947967; margin: 12px 0 30px; }
+.stats-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 26px 18px; }
+.stat-card { background: #fff; border-radius: 18px; padding: 28px 24px; min-height: 196px; display: flex; flex-direction: column; justify-content: space-between; }
+.stat-label { color: var(--brown); font-size: 13px; }
+.stat-number { color: var(--coffee); font-size: 30px; }
+.dashboard-note { color: #8b6e5c; font-size: 13px; }
+@media (max-width: 900px) {
+  .app-shell { grid-template-columns: 210px minmax(0, 1fr); }
+  .sidebar-link { padding: 14px; }
+  .navbar { padding: 16px 20px; flex-wrap: wrap; }
+  .dashboard-main { padding: 22px; }
+}
+@media (max-width: 600px) {
+  .app-shell { grid-template-columns: 1fr; }
+  .sidebar { padding: 18px; }
+  .sidebar-title { margin-bottom: 14px; }
+  .sidebar-menu { flex-direction: row; flex-wrap: wrap; gap: 8px; }
+  .sidebar-link { width: auto; padding: 10px; }
+  .sidebar-icon { display: none; }
+  .navbar-name { display: none; }
+  .stats-grid { grid-template-columns: 1fr; }
+}

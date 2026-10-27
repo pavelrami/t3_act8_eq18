@@ -1,0 +1,82 @@
+.tareas-page { width: 100%; }
+.tareas-panel { background: #fff; border-radius: 18px; padding: 24px; max-width: 1300px; }
+.tareas-toolbar { display: grid; grid-template-columns: minmax(0, 1fr) minmax(200px, 280px); gap: 16px; margin-bottom: 18px; }
+.tareas-filter { display: flex; flex-direction: column; gap: 8px; }
+.tareas-filter label, .tareas-controles label { color: var(--coffee); font-size: 13px; font-weight: 500; }
+.tareas-filter input, .tareas-filter select {
+  border: 1px solid #e2d1c3; border-radius: 13px; background: var(--cream);
+  color: var(--coffee); min-height: 47px; width: 100%; padding: 0 15px; font-size: 13px;
+}
+.tareas-filter input:focus, .tareas-filter select:focus, .tareas-controles select:focus,
+.tareas-pagina:focus-visible { outline: 2px solid var(--camel); outline-offset: 2px; }
+.tareas-scroll { width: 100%; overflow-x: auto; }
+.tareas-tabla { width: 100%; border-collapse: collapse; min-width: 650px; text-align: left; }
+.tareas-tabla th { padding: 14px 12px; color: var(--coffee); font-size: 13px; font-weight: 600; border-bottom: 1px solid #a08e7f; }
+.tareas-tabla td { padding: 15px 12px; color: #543a2a; font-size: 13px; border-bottom: 1px solid #e9ddd3; line-height: 1.5; }
+.tareas-tabla tbody tr:hover { background: #fffaf1; }
+.tareas-tabla td:first-child { width: 60px; }
+.tareas-tabla td:nth-child(3) { width: 105px; }
+.tareas-tabla td:nth-child(4) { width: 125px; }
+.tarea-estado { display: inline-flex; border-radius: 999px; padding: 5px 9px; font-size: 12px; font-weight: 600; }
+.tarea-estado.completada { color: #215a39; background: #e7f5e9; }
+.tarea-estado.pendiente { color: #822724; background: #fff0ed; }
+.tareas-vacio { text-align: center; padding: 45px 10px !important; color: #826b59 !important; }
+.tareas-footer { display: flex; align-items: center; justify-content: space-between; gap: 20px; padding-top: 22px; flex-wrap: wrap; }
+.tareas-resumen { font-size: 12px; color: #8a7162; }
+.tareas-controles { display: flex; gap: 9px; align-items: center; }
+.tareas-controles select { background: #fffaf5; border: 1px solid #e3d2c4; border-radius: 9px; color: var(--coffee); padding: 9px 12px; }
+.tareas-pagina { border: 1px solid #e4d5c9; border-radius: 8px; min-width: 36px; height: 36px; background: #fffaf5; color: var(--wine); font-size: 18px; }
+.tareas-pagina:hover:not(:disabled) { background: #f7e8d8; }
+.tareas-numero { display: inline-flex; align-items: center; justify-content: center; min-width: 58px; font-size: 13px; font-weight: 600; color: var(--coffee); }
+.tareas-feedback { margin: 30px 0; padding: 24px; border-radius: 12px; background: var(--cream); color: var(--coffee); }
+.tareas-error { border: 1px solid #d5a19d; color: #7b2421; }
+.tareas-error button, .dashboard-note button { margin-left: 8px; border: 0; background: var(--wine); color: white; border-radius: 8px; padding: 8px 11px; }
+.tareas-nota { margin-top: 18px; color: #8b6e5c; font-size: 12px; }
+@media (max-width: 740px) {
+  .tareas-panel { padding: 14px; }
+  .tareas-toolbar { grid-template-columns: 1fr; }
+  .tareas-footer { align-items: flex-start; }
+  .tareas-controles { flex-wrap: wrap; }
+}
+
+/* Actividad 8: botones y modal CRUD */
+.tareas-encabezado { display: flex; justify-content: space-between; align-items: flex-start; gap: 18px; flex-wrap: wrap; }
+.tareas-encabezado .dashboard-subtitle { margin-bottom: 30px; }
+.tarea-boton-primario { background: var(--wine); color: white; border: 1px solid var(--wine); border-radius: 10px; padding: 12px 18px; font-weight: 600; font-size: 13px; }
+.tarea-boton-primario:hover:not(:disabled) { background: #541514; }
+.tarea-boton-secundario { background: #fff; color: var(--coffee); border: 1px solid #d8c3ae; border-radius: 10px; padding: 12px 18px; font-size: 13px; font-weight: 600; }
+.tarea-boton-secundario:hover:not(:disabled) { background: var(--cream); }
+.tareas-tabla td:nth-child(4) { width: 125px; }
+.tareas-tabla td:nth-child(5) { width: 173px; }
+.tareas-tabla { min-width: 780px; }
+.tarea-acciones { display: flex; gap: 7px; align-items: center; }
+.tarea-acciones button { border: 1px solid #decac0; border-radius: 8px; font-size: 12px; padding: 7px 9px; background: white; font-weight: 500; }
+.tarea-editar { color: var(--brown); }
+.tarea-editar:hover:not(:disabled) { background: #fff5e7; }
+.tarea-eliminar { color: #8d2622; }
+.tarea-eliminar:hover:not(:disabled) { background: #fff0ed; }
+.tarea-local { display: block; margin-top: 3px; font-size: 10px; color: var(--brown); font-weight: 600; }
+.tareas-pagina.actual { background: var(--wine); color: #fff; border-color: var(--wine); }
+.tareas-aviso { margin-bottom: 16px; padding: 12px 14px; border-radius: 10px; font-size: 13px; display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+.tareas-aviso.es-exito { background: #eaf5eb; color: #245335; border: 1px solid #aed9bb; }
+.tareas-aviso.es-error { background: #fff0ed; color: #812b27; border: 1px solid #e2bbb4; }
+.tareas-aviso button { border: 0; background: transparent; color: inherit; font-size: 20px; line-height: 1; }
+.modal-fondo { position: fixed; inset: 0; z-index: 50; background: rgba(20, 10, 5, 0.6); padding: 16px; display: flex; justify-content: center; align-items: center; }
+.modal-tarea { background: #fff; width: min(100%, 530px); border-radius: 18px; padding: 27px; max-height: 95vh; overflow-y: auto; box-shadow: 0 18px 60px rgba(0,0,0,.24); }
+.modal-titulo-fila { display: flex; justify-content: space-between; gap: 16px; align-items: flex-start; }
+.modal-titulo-fila h2 { margin: 0; font-size: 23px; color: var(--coffee); }
+.modal-titulo-fila p { margin: 6px 0 22px; color: #896e5e; font-size: 13px; }
+.modal-cerrar { background: #fff8f2; border: 1px solid #ead8c9; color: var(--coffee); width: 34px; height: 34px; border-radius: 9px; font-size: 20px; }
+.modal-etiqueta { display: block; color: var(--coffee); font-size: 13px; font-weight: 600; margin: 16px 0 8px; }
+.modal-tarea textarea, .modal-tarea select { width: 100%; border: 1px solid #dac4b7; background: var(--cream); border-radius: 10px; padding: 12px; color: var(--coffee); font: inherit; font-size: 13px; }
+.modal-tarea textarea { resize: vertical; min-height: 95px; }
+.modal-tarea textarea:focus, .modal-tarea select:focus, .tarea-acciones button:focus-visible, .modal-botones button:focus-visible { outline: 2px solid var(--camel); outline-offset: 2px; }
+.modal-ayuda { font-size: 12px; color: #856b5b; }
+.modal-aviso { background: #fff7e7; border-radius: 9px; padding: 10px; font-size: 12px; color: #805520; }
+.modal-error { background: #fff0ed; color: #822724; padding: 10px; border-radius: 9px; font-size: 13px; }
+.modal-botones { margin-top: 25px; display: flex; justify-content: flex-end; flex-wrap: wrap; gap: 9px; }
+@media (max-width: 740px) {
+  .tareas-encabezado .dashboard-subtitle { margin-bottom: 12px; }
+  .tareas-encabezado { margin-bottom: 20px; }
+  .modal-tarea { padding: 18px; }
+}
