@@ -1,12 +1,10 @@
 # Gestor de Tareas Académicas - Actividad 8 (Equipo 18)
 
 Mini sistema web desarrollado con React y Vite para consumir APIs externas, simular un inicio de sesión y administrar una tabla de tareas con filtros, paginación y operaciones CRUD.
-
 ## Integrantes
 
 - Integrante 1: 
 - Integrante 2: Pèrez Jimènez Xana Amalinalli
-
 
 ## Tecnologías
 
